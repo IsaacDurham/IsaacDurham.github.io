@@ -1,0 +1,217 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #daa06d;
+    color: #000;
+    background-image: linear-gradient(to top, #cf8c52, rgb(233, 193, 147));
+    background-repeat: no-repeat;
+}
+
+header{
+    background-color: #DAA06D;
+    background-image: url(bg1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 150%;
+    font-weight: bold;
+    padding: 0;
+    margin-top: 0;
+    text-align: center;
+}
+
+h1{
+    font-family: Tahoma;
+    margin-bottom: 0;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+h2{
+    font-size: 200%;
+    margin: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black
+}
+
+
+main{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-left: 30px;
+    overflow: auto;
+    min-height: 200px;
+    background-color: rgb(233, 193, 147);
+    text-align: center;
+}
+    
+nav a{
+    text-decoration: none;
+    transition: 1s ease-out;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+}
+
+nav li{
+    border-bottom: 1px solid #000033
+}
+
+nav a:visited {color: rgb(91, 0, 165);}
+nav a:link {color:#5c7fa3;}
+nav a:hover{color: #ffffff;}
+
+
+.operation{
+    color: white;
+    font-family: Tahoma;
+    font-size: 250%;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
+.aboutpage{
+    line-height: 200%; 
+    background-repeat: no-repeat; 
+    background-color: rgb(233, 193, 147);
+    background-position: right;
+}
+
+.gallery table td:hover{
+    transform: scale(1.2);
+    transition: .5s ease-out;
+}
+footer{
+    background-color: rgb(233, 193, 147);
+    color: rgb(44, 44, 44);
+    text-align: center;
+    font-style: italic;
+    font-size: 15px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+u1{
+    list-style-image: url(tack.png);
+    }
+
+#wrapper{
+    outline: 1px solid black;
+    background-color: #DAA06D;
+}
+
+form{
+    display: flex; 
+    flex-flow: column nowrap;
+}
+
+input,textarea {
+    margin-bottom: .5em;
+}
+
+.merch img:hover{
+    transform: scale(1.2);
+    transition: .5s ease-out;
+}
+
+@media (min-width: 600px) {
+    nav u1{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+    nav ul{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+    nav li{
+        border-bottom: none;
+    }
+    section{
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+    .content main{
+        display: grid;
+    }
+
+    h2{
+        grid-row:1/2;
+        grid-column:1/5;
+    }
+    section{
+        grid-row:2/3;
+        grid-column:auto
+    }
+    footer{
+        grid-row:auto;
+        grid-column: 1/5;
+    }
+    main{
+        text-align:left;
+    }
+    form{
+        display: grid;
+        grid-gap: 1em;
+        grid-template-columns: 6em 1fr;
+        grid-template-rows: auto;
+        width: 60%;
+        max-width: 40em;
+    }
+    input[ type="submit"]{
+        grid-column: 2/3;
+        max-width: 9em
+    }
+    
+}
+
+@media (min-width:1024px) {
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        padding-top: 1em;
+    }
+    nav{
+        text-align: left;
+        padding-left: 1em;
+    }
+    #wrapper{
+        margin:auto;
+        width: 80%;
+        border: 1px solid #000033;
+        display: grid;
+        grid-template-columns: 180px auto;
+        grid-template-rows: auto;
+    }
+    header{
+        grid-row: 1/2;
+        grid-column:1/3;
+    }
+    nav{
+        grid-row:2/5;
+        grid-column: 1/2;
+    }
+    div{
+        grid-row:2/3;
+        grid-column: 2/3;
+    }
+    main{
+        grid-row:3/4;
+        grid-column:2/3;
+        text-align: left;
+    }
+    footer{
+        grid-row:4/5;
+        grid-column:2/3;
+    }
+}
